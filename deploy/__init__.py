@@ -31,3 +31,28 @@ class DeployImageSegmentation(DeployBase):
 class DeployImageClassification(DeployBase):
     def test_deploy(self):
         self.predict(str(Path(self.path, "1.jpg").absolute()))
+
+
+class DeployTextSegmentation(DeployBase):
+    def test_deploy(self):
+        self.predict(str(Path(self.path, "preset", "in", "1.txt").absolute()))
+
+
+class DeployTextClassification(DeployBase):
+    def test_deploy(self):
+        self.predict(str(Path(self.path, "preset", "in", "1.txt").absolute()))
+
+
+class DeployAudioClassification(DeployBase):
+    def test_deploy(self):
+        self.predict(str(Path(self.path, "1.webm").absolute()))
+
+
+class DeployVideoClassification(DeployBase):
+    def test_deploy(self):
+        pass
+
+
+class DeployDataframeRegression(DeployBase):
+    def test_deploy(self):
+        self.predict(str(Path(self.path, "1.webm").absolute()))
